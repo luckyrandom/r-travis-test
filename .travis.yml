@@ -17,6 +17,4 @@ after_failure:
   - ./travis-tool.sh dump_logs
 
 after_success:
-  - curl -OL http://raw.github.com/luckyrandom/r-travis/master/scripts/github-release.rb
-  - chmod 755 ./github-release.rb
   - ./travis-tool.sh deploy ./rdummypackage*.tar.gz
